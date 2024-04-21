@@ -1,4 +1,6 @@
 * {
+    color: black;
+    font-size: bold;
     padding: 0;
     margin-left: 2px;
     margin-left: 2px;
@@ -17,11 +19,19 @@ body {
 }
 
 .left-container {
+    /* bg-image */
+
+    /* background-image: url('https://th.bing.com/th/id/OIP.Mwve6IAMxno1zmoCCnPyVQHaEK?w=282&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+    /* container */
     background-color: rgb(207, 207, 207);
     width: 50vw;
     height: 80vh;
     margin-right: 5px;
     text-align: center;
+
     /* border edge shapeing */
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
@@ -49,12 +59,30 @@ body {
 }
 
 .right-container {
+
     background-color: rgb(207,207,207);
     width: 50vw;
     height: 80vh;
     margin-left: 5px;
     text-align: center;
+    
     /* border edge shapeing */
     border-top-right-radius: 24px;
     border-bottom-right-radius: 24px;
+
+    /* display  */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.input-image {
+    display: block;
+    background-color: rgb(134, 134, 134);
+}
+
+.output-image {
+    display: block;
+    background-color: rgb(134, 134, 134);
 }

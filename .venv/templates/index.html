@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
     <title>3D-model classification and segementation</title>
+    
 </head>
 <body>
     <div class="bg-container">
@@ -12,15 +13,32 @@
             <h2 class="l-head">Upload your 3D model for classification and segementation</h2>
             <br/>
             <br/>
-            <form>
+            <form method="POST" enctype="multipart/form-data" action="/upload">
                 <label for="add-img">Upload your 3D-model:</label>
-                <input type="file" id="add-img" name="3D-model-img"/>
+                <input type="file" id="file-input" name="file" accept="image/*"/>
                 <br/>
                 <br/>
-                <input type="submit" value="Upload"  class="l-button"/>
+                <input type="submit" value="GET Result"  class="l-button"/>
             </form>
         </div>
-        <div class="right-container">Right</div>
+        <div class="right-container">
+            <h3>Uploaded Image</h3>
+            <img class="input-image" src="" alt="uploaded image" id="imageOutput" width="300px" height="200px"/>
+            <!-- <p>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{message}}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                {% endwith %}
+            </p> -->
+            <h3>Result</h3>
+            <img class="output-image" src="" alt="result image" id="modelResult" width="300px" height="200px" />
+        </div>
     </div>
 </body>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </html>
